@@ -111,6 +111,8 @@ typedef void (^STOMPMessageHandler)(STOMPMessage *message);
        headers:(NSDictionary *)headers
           body:(NSString *)body;
 
+- (void)sendMessage:(NSString *)message;
+
 - (STOMPSubscription *)subscribeTo:(NSString *)destination
                     messageHandler:(STOMPMessageHandler)handler;
 - (STOMPSubscription *)subscribeTo:(NSString *)destination

@@ -382,6 +382,10 @@ CFAbsoluteTime serverActivity;
                           body:body];
 }
 
+- (void)sendMessage:(NSString *)message {
+    [self.socket writeString:message];
+}
+
 - (STOMPSubscription *)subscribeTo:(NSString *)destination
                     messageHandler:(STOMPMessageHandler)handler {
     return [self subscribeTo:destination
